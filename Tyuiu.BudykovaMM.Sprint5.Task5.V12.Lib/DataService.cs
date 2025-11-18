@@ -19,13 +19,16 @@ namespace Tyuiu.BudykovaMM.Sprint5.Task5.V12.Lib
 
                 double numb = Convert.ToDouble(formattedNum);
 
-                if (numb > 0)
+                if (numb == Math.Truncate(numb))
                 {
-                    sum1 += numb;
-                }
-                if (numb < 0)
-                {
-                    sum2 += numb;
+                    if (numb > 0)
+                    {
+                        sum1 += numb;
+                    }
+                    if (numb < 0)
+                    {
+                        sum2 += numb;
+                    }
                 }
             }
             return Math.Round(sum1-sum2, 3);
